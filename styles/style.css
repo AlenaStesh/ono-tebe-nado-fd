@@ -1,1 +1,6 @@
-/* место для вашего кода */
+.header {
+  padding: 92px 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) repeat(1, 2fr) repeat(4, 1fr);
+  font-size: 18px;
+}
