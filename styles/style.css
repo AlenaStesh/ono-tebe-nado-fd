@@ -1,6 +1,19 @@
 .header {
-  padding: 92px 50px;
+  width: 100%;
+  padding: 93px 52px 95px 50px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr) repeat(1, 2fr) repeat(4, 1fr);
+  grid-template-columns: 1fr 148px 1fr;
   font-size: 18px;
+}
+
+.header-logo {
+  display: grid;
+  justify-self: center;
+  align-self: center;
+  width: 148px;
+  height: 105px;
+}
+
+.header-logo-image {
+  width: 100%;
 }
