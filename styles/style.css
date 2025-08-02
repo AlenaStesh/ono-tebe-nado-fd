@@ -15,19 +15,26 @@
   padding: 0;
   margin: 0;
   display: flex;
-  justify-content: start;
+  align-items: center;
   gap: 32px;
   font-weight: 400;
   text-underline-offset: 4px;
 }
 
 .header__links-list-item {
-  list-style: circle;
   text-decoration: underline;
 }
 
-.header__links-list-item-no-bullit {
+.header__links-list-item-no-bullet {
   list-style: none;
+  text-decoration: none;
+}
+
+.header-link {
+  text-decoration: underline;
+}
+
+.header-link-no-underline {
   text-decoration: none;
 }
 
@@ -62,67 +69,64 @@
 
 .cover {
   position: relative;
-  background-image: url(../images/cover.jpg);
-  background-size: cover;
-  min-height: 757px;
+  background: url(../images/cover.jpg) center / cover no-repeat;
   width: 1100px;
-  padding: 165px 20px 106px 50px;
-  background-repeat: no-repeat;
+  min-height: 757px;
+  padding: 0 50px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.overlay {
+.cover-overlay {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.6);
   inset: 0;
-  width: 100%;
-  height: 100%;
   z-index: 0;
 }
 
 .cover-title {
-  font-family: "Raleway", "Arial", "Helvetica", sans-serif;
+  padding-top: 165px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
   font-size: 100px;
   font-weight: 700;
-  line-height: 114.9px;
-  letter-spacing: 30%;
-  text-transform: uppercase;
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  line-height: 115px;
+  letter-spacing: 30px;
   color: #fff;
-}
-
-.aligned-text-left {
-  padding-left: 50px;
-  align-self: flex-start;
-  grid-row: 1;
   z-index: 1;
 }
 
 .aligned-text-center {
-  align-self: center;
-  z-index: 1;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 34px;
 }
 
 .aligned-text-right {
-  align-self: flex-end;
-  z-index: 1;
+  text-align: end;
+  margin-top: 20px;
+  margin-left: 614px;
 }
 
 .description {
+  position: relative;
   font-size: 22px;
   line-height: 28px;
+  word-spacing: 18.7px;
   text-transform: uppercase;
-  letter-spacing: 90%;
   color: #fff;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 260px 50px 0;
   z-index: 1;
 }
 
 .description-text {
+  padding-bottom: 11px;
   display: block;
   text-align: left;
   align-content: center;
@@ -135,6 +139,12 @@
 }
 
 .description-button {
+  padding: 12px 32px;
+  font-size: 22px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid #fff;
   z-index: 1;
 }
 
@@ -185,11 +195,17 @@
   padding: 48px 40px 48px;
 }
 
-.card-title {
-  z-index: 1;
+.card-overlay {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  inset: 0;
+  width: 100%;
+  min-height: 100%;
+  z-index: 0;
 }
 
-.card-text {
+.card-title, .card-text {
+  position: relative;
   z-index: 1;
 }
 
@@ -282,6 +298,8 @@
 }
 
 .footer-socials {
+  margin: 0;
+  padding: 0;
   display: flex;
   gap: 40px;
 }
