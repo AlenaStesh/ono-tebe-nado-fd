@@ -50,10 +50,9 @@
   object-fit: contain;
 }
 
-.header-address {
+.address {
   display: flex;
   flex-direction: column;
-  justify-self: end;
   align-items: flex-start;
   gap: 1px;
   max-width: 240px;
@@ -64,12 +63,16 @@
   text-underline-offset: 3px;
 }
 
-.header-address-links {
+.header-address {
+  justify-self: end;
+}
+
+.address-link {
   display: flex;
   flex-direction: column;
 }
 
-.header-address-text {
+.address-text {
   width: 237px;
 }
 
@@ -84,7 +87,7 @@
   justify-content: space-between;
 }
 
-.cover-overlay {
+.overlay {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.6);
   inset: 0;
@@ -150,12 +153,12 @@
   text-transform: uppercase;
   color: #fff;
   background-color: transparent;
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
   z-index: 1;
 }
 
 .lots {
-  margin: 180px 24px 0;
+  margin: 180px 0 0;
   width: 1100px;
   padding: 0;
   font-family: "Raleway", "Arial", "Helvetica", sans-serif;
@@ -164,7 +167,7 @@
 }
 
 .lots-title {
-  margin-left: 40px;
+  margin-left: 65px;
   margin-bottom: 27px;
   font-size: 40px;
   font-weight: 700;
@@ -185,7 +188,7 @@
 
 .lots-card-list-item {
   width: 334px;
-  height: 596px;
+  min-height: 596px;
 }
 
 .card {
@@ -199,13 +202,6 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-
-.card-overlay {
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.6);
-  inset: 0;
-  z-index: 0;
 }
 
 .card-link {
@@ -254,7 +250,7 @@
 
 .lots-more-link {
   display: block;
-  margin-left: 40px;
+  margin-left: 65px;
   margin-top: 30px;
   font-size: 20px;
   text-decoration: underline 1px;
@@ -291,7 +287,6 @@
 
 .about-column {
   min-width: 693px;
-  min-height: 312px;
   margin-top: 135px;
   padding-left: 25px;
 }
@@ -330,23 +325,8 @@
 }
 
 .footer-address {
-  display: flex;
-  flex-direction: column;
   justify-self: start;
-  align-items: flex-start;
-  max-width: 264px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 24px;
-  gap: 1px;
-  text-underline-offset: 4px;
   padding: 1px;
-}
-
-.footer-address-text {
-  width: 260px;
-  padding-left: 1px;
 }
 
 .footer-menu {
@@ -355,7 +335,6 @@
   align-content: center;
   width: 100%;
   padding-top: 2px;
-  padding-right: 20px;
 }
 
 .footer-link-list {
